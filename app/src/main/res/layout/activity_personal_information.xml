@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8199D5AF"
+    tools:context=".PersonalInformation">
+
+    <EditText
+        android:id="@+id/tc_text"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="81dp"
+        android:ems="10"
+        android:hint="TC No"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/sehir_text"
+        app:layout_constraintEnd_toStartOf="@+id/tel_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/isim_text" />
+
+    <EditText
+        android:id="@+id/dogumtarihi_text"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Doğum Tarihi"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/sehir_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sehir_text" />
+
+    <EditText
+        android:id="@+id/sehir_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="44dp"
+        android:ems="10"
+        android:hint="Şehir"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/ehliyetFoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dogumtarihi_text"
+        app:layout_constraintTop_toBottomOf="@+id/tel_text" />
+
+    <EditText
+        android:id="@+id/tel_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="34dp"
+        android:ems="10"
+        android:hint="Telefon"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/sehir_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tc_text"
+        app:layout_constraintTop_toBottomOf="@+id/soyisim_text" />
+
+    <EditText
+        android:id="@+id/isim_text"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="İsim"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/soyisim_text"
+        app:layout_constraintEnd_toStartOf="@+id/soyisim_text"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/soyisim_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:hint="Soyisim"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/tel_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/isim_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ehliyetFoto"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="178dp"
+        android:background="#83B685"
+        android:onClick="ehliyetYukle"
+        android:text="Ehliyet Fotoğrafı"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/bilgileri_kaydet"
+        app:layout_constraintEnd_toEndOf="@+id/dogumtarihi_text"
+        app:layout_constraintStart_toStartOf="@+id/dogumtarihi_text"
+        app:layout_constraintTop_toBottomOf="@+id/sehir_text" />
+
+    <Button
+        android:id="@+id/bilgileri_kaydet"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:background="#52D157"
+        android:onClick="bilgileriKaydet"
+        android:text="Bilgileri Kaydet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ehliyetFoto" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/car2"
+    android:onClick="adminLogin"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/userLoginButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="7dp"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:onClick="userLogin"
+        android:text="Giriş Yap"
+        app:layout_constraintBottom_toTopOf="@+id/userSignupButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/userSignupButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/common_google_signin_btn_text_dark_pressed"
+        android:onClick="userRegister"
+        android:text="Kayıt Ol"
+        app:layout_constraintBottom_toTopOf="@+id/adminLoginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userLoginButton" />
+
+    <Button
+        android:id="@+id/adminLoginButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/common_google_signin_btn_text_dark_pressed"
+        android:onClick="adminLogin"
+        android:text="Bayi Girişi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userSignupButton" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="322dp"
+        android:gravity="center"
+        android:shadowColor="#880230"
+        android:text="HOŞGELDİNİZ"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#D83939"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/userLoginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

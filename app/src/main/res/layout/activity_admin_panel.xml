@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminPanel">
+
+    <ImageView
+        android:id="@+id/carImage"
+        android:layout_width="387dp"
+        android:layout_height="257dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="33dp"
+        android:onClick="selectCarImage"
+        app:layout_constraintBottom_toTopOf="@+id/model"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <EditText
+        android:id="@+id/marka"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="18dp"
+        android:ems="10"
+        android:hint="Marka"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/model"
+        app:layout_constraintEnd_toStartOf="@+id/model"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/yil"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="18dp"
+        android:ems="10"
+        android:hint="Yıl"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/ucret"
+        app:layout_constraintEnd_toStartOf="@+id/ucret"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/vites"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="18dp"
+        android:ems="10"
+        android:hint="Vites"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/plaka"
+        app:layout_constraintEnd_toStartOf="@+id/plaka"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/model"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:hint="Model"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/ucret"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/marka"
+        app:layout_constraintTop_toBottomOf="@+id/carImage" />
+
+    <EditText
+        android:id="@+id/ucret"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Günlük Ücret"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/plaka"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/yil"
+        app:layout_constraintTop_toBottomOf="@+id/model" />
+
+    <Button
+        android:id="@+id/aracKaydet"
+        android:layout_width="151dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="71dp"
+        android:background="#B0E6B3"
+        android:onClick="saveCar"
+        android:text="Araç Kaydet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plaka" />
+
+    <EditText
+        android:id="@+id/plaka"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:hint="Plaka"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/aracKaydet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vites"
+        app:layout_constraintTop_toBottomOf="@+id/ucret" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

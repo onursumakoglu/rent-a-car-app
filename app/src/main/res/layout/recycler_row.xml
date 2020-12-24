@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="30dp"
+    android:background="#F1FDF2">
+
+    <ImageView
+        android:id="@+id/recyclerview_row_imageview"
+        android:layout_width="397dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="15dp"
+        android:background="#F1FDF2"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerview_row_ucret"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/recyclerview_row_marka"
+        android:layout_width="167dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="21dp"
+        android:fontFamily="serif"
+        android:gravity="center_vertical"
+        android:text="marka"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerview_row_vites"
+        app:layout_constraintEnd_toStartOf="@+id/recyclerview_row_ucret"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview_row_imageview" />
+
+    <TextView
+        android:id="@+id/recyclerview_row_vites"
+        android:layout_width="96dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="#DFDBDB"
+        android:text="vites"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/recyclerview_row_yil"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview_row_ucret" />
+
+    <TextView
+        android:id="@+id/recyclerview_row_yil"
+        android:layout_width="97dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="194dp"
+        android:background="#DFDBDB"
+        android:text="yil"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintBaseline_toBaselineOf="@+id/recyclerview_row_vites"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/recyclerview_row_vites" />
+
+    <TextView
+        android:id="@+id/recyclerview_row_ucret"
+        android:layout_width="83dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="22dp"
+        android:gravity="center"
+        android:text="ücret"
+        android:textAlignment="viewEnd"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerview_row_vites"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/recyclerview_row_marka"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview_row_imageview" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="385dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview_row_vites" />
+</androidx.constraintlayout.widget.ConstraintLayout>
