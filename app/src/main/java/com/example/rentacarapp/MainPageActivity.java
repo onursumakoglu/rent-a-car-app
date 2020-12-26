@@ -66,6 +66,19 @@ public class MainPageActivity extends AppCompatActivity {
         getDataFromFirestore();
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.addOnItemTouchListener(
+                new RecyclerItemClickListener(getApplicationContext(), recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+                        String bakalim = markaFromDB.get(position);
+                        System.out.println(bakalim);
+                    }
+
+                    @Override
+                    public void onLongItemClick(View view, int position) {
+
+                    }
+                }));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         mainPageRecyclerAdapter = new MainPageRecyclerAdapter(downloadUrlFromDB, markaFromDB, modelFromDB, yilFromDB, vitesFromDB, ucretFromDB);
         recyclerView.setAdapter(mainPageRecyclerAdapter);

@@ -29,6 +29,7 @@ public class MainPageRecyclerAdapter extends RecyclerView.Adapter<MainPageRecycl
         this.vitesList = vitesList;
         this.yilList = yilList;
         this.ucretList = ucretList;
+
     }
 
     @NonNull
@@ -37,7 +38,6 @@ public class MainPageRecyclerAdapter extends RecyclerView.Adapter<MainPageRecycl
 
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.recycler_row, parent, false);
-
         return new CarHolder(view);
     }
 
